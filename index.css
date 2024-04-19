@@ -50,7 +50,8 @@ body {
 
 .score-button {
     padding: 8px 15px;
-    background-color: white;
+    background-color: #1a73e8;
+    color: white;
     font-size: 15px;
     cursor: pointer;
 }
