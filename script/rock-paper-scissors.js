@@ -1,6 +1,7 @@
 const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, tie: 0 };
         updateScore();
 
+        //Firt get the computer choice
         function pickComputer() {
             let computerRandom = Math.random();
             let computerChoice = '';
