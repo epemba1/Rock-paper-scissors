@@ -81,6 +81,7 @@ const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, 
                 score.tie += 1;
             }
 
+            //Save the score 
             localStorage.setItem('score', JSON.stringify(score));
             updateScore();
 
