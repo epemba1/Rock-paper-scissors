@@ -42,6 +42,7 @@ const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, 
             }
         )
 
+        //Human choice
         function humanMove(myMove) {
             const computerChoice = pickComputer();
 
