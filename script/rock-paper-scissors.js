@@ -98,6 +98,7 @@ const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, 
             document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Loses: ${score.loses} Tie: ${score.tie}`;
         }
 
+        //Reset score
         function resetScore() {
             score.wins = 0;
             score.loses = 0;
