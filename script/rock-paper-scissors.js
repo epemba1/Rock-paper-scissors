@@ -1,6 +1,7 @@
 const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, tie: 0 };
         updateScore();
 
+        //Firt get the computer choice
         function pickComputer() {
             let computerRandom = Math.random();
             let computerChoice = '';
@@ -41,6 +42,7 @@ const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, 
             }
         )
 
+        //Human choice
         function humanMove(myMove) {
             const computerChoice = pickComputer();
 
@@ -80,6 +82,7 @@ const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, 
                 score.tie += 1;
             }
 
+            //Save the score 
             localStorage.setItem('score', JSON.stringify(score));
             updateScore();
 
@@ -90,10 +93,12 @@ const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, loses: 0, 
         Computer`;
         }
 
+        //Update score
         function updateScore() {
             document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Loses: ${score.loses} Tie: ${score.tie}`;
         }
 
+        //Reset score
         function resetScore() {
             score.wins = 0;
             score.loses = 0;
